@@ -31,7 +31,7 @@ def tb():
         It is an integral part of a testing strategy that incorporates notebooks as first-class
         citizens in software development and testing practices.
     """
-    with testbook('notebooks/calculator_nb.ipynb', execute=True) as tb_client:
+    with testbook('notebooks/calculator.ipynb', execute=True) as tb_client:
         yield tb_client
 
 @pytest.mark.parametrize("invalid_input", [
@@ -44,7 +44,7 @@ def test_calculator_invalid_initial_value(tb, invalid_input):
     Tests Calculator initialisation with invalid inputs. The Calculator
     is expected to raise a ValueError when initialised with non-numeric
     inputs, ensuring robust input validation.
-    
+
     Parameters:
         tb: The Testbook fixture for interacting with Jupyter notebooks.
         invalid_input: The input to test the Calculator with, expected to
@@ -71,7 +71,7 @@ def test_calculator_add_invalid_input(tb, invalid_add_value):
     Tests the add method of the Calculator with invalid inputs. Validates
     that the method raises a ValueError when attempting to add non-numeric
     values, preserving the integrity of the calculator's state.
-    
+
     Parameters:
         tb: The Testbook fixture for interacting with Jupyter notebooks.
         invalid_add_value: The value to test the add method with, expected
@@ -99,7 +99,7 @@ def test_calculator_subtract_invalid_input(tb, invalid_subtract_value):
     Tests the subtract method of the Calculator with invalid inputs. This test
     ensures that attempting to subtract non-numeric values from the calculator's
     current value raises a ValueError, maintaining the calculator's accuracy.
-    
+
     Parameters:
         tb: The Testbook fixture for interacting with Jupyter notebooks.
         invalid_subtract_value: The value to test the subtract method with,
