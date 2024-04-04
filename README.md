@@ -1,4 +1,5 @@
 # Notebook Automation and Testing Repository
+![Test Status](https://github.com/rossop/jupyter-automations/actions/workflows/tests.yml/badge.svg)
 
 This repository is dedicated to exploring and mastering notebook automation, testing strategies, Continuous Integration (CI), and automatic generation of code and documentation. It serves as a learning platform and a reference for implementing best practices in managing and automating Jupyter notebooks, with a focus on enhancing productivity and ensuring code quality in data science and engineering projects.
 
