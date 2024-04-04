@@ -120,7 +120,8 @@ def test_calculator_subtract_invalid_input(tb, invalid_subtract_value):
 @pytest.mark.parametrize("initial_value, add_value, subtract_value, expected_result", [
     (10, 5, 3, 12),
     (0, -2, -3, 1),
-    (-5, 10, 5, 0)
+    (-5, 10, 5, 0),
+    (10.23, 5.26, 3.18, 12.31)
 ])
 def test_calculator_valid_operations(tb, initial_value, add_value, subtract_value, expected_result):
     """
